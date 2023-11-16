@@ -17,14 +17,9 @@ import com.example.miniprojekt2_receiver.ui.theme.Miniprojekt2receiverTheme
 
 class MainActivity : ComponentActivity() {
 
-    private val intentFilter = IntentFilter("com.example.mini_projekt_1.ACTION_PRODUCT_ADDED")
-    private val receiver = ProductBroadcastReceiver()
-
-    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        registerReceiver(receiver,intentFilter)
 
         setContent {
             Miniprojekt2receiverTheme {
@@ -37,11 +32,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        unregisterReceiver(receiver)
     }
 }
 
