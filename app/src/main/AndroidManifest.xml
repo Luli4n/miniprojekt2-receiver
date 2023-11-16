@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- <uses-permission android:name="com.example.mini_projekt_1.MY_INTENT_PERMISSION" /> -->
+    <permission android:name="com.example.mini_projekt_1.MY_INTENT_PERMISSION"/>
+    <uses-permission android:name="com.example.mini_projekt_1.MY_INTENT_PERMISSION"/>
+
+
     <application
         android:name=".ReceiverApplication"
         android:allowBackup="true"
@@ -39,7 +42,6 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
             tools:node="merge">
-            <!-- If you are using androidx.startup to initialize other components -->
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"

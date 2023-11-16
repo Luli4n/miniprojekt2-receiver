@@ -12,7 +12,6 @@ import androidx.work.WorkManager
 class ProductBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        Log.d("ProductBroadcastReceiver", "Intent received: ${intent.action}")
 
         val productName = intent.getStringExtra("productName")
         val productPrice = intent.getFloatExtra("productPrice", 0.0f)
